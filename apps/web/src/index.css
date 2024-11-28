@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: #e2e8f0;
+  }
+}
+
+@layer components {
+  .neon-border {
+    position: relative;
+  }
+
+  .neon-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    pointer-events: none;
+  }
+
+  .cyber-panel {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .terminal-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: #38bdf8;
+  }
+}
